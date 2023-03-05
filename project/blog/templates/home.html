@@ -1,10 +1,10 @@
 <h1>LikeLion 10th Blog Project</h1>
-<br />
-{% for blog in blogs %} <!-- home 함수에서 던져주는 blogs 는 QuerySet이다. -->
+<br/>
+{% for blog in blogs %}
 <div>
-  <h5>{{blog.title}}</h5> <!--blog는 object이다 -->
-  {{blog.created_at}}
-  <p>{{blog.contents}}</p>
+    <h5>{{blog.title}}</h5>
+    {{blog.created_at}}
+    <p>{{blog.content}}</p>
 </div>
-<br />
+<br/>
 {% endfor %}

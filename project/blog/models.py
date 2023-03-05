@@ -1,13 +1,11 @@
 from django.db import models
+from matplotlib.cbook import maxdict
 
-class Blog(models.Model):
-    title=models.CharField(max_length=20)
-    content=models.TextField()
-    created_at=models.DateTimeField(auto_now_add=True) #처음 객체를 생성할때 데이트 값 업데이트, 수정할때는 업데이트 X-> auto_add
-    updated_at = models.DateTimeField(auto_now=True)
-    email = models.EmailField(default="")
-    #최소 5개 추가, admin 사이트에서 해보기
+class Blog(models.Model): # models.Model 상속 받아서 사용
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True) # 객체를 처음 생성해줄때만 값 update
+
     def __str__(self):
-        return self.title #models에서 제공, 사용자 입맛에 맞게 customizing
-
+        return self.title
 
